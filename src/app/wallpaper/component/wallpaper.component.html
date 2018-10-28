@@ -1,0 +1,10 @@
+<par-loading-spinner *ngIf="isLoading"></par-loading-spinner>
+<div class="par-wallpaper" *ngIf="!isLoading">
+    <div class="par-wallpaper-imageWrapper">
+        <img appLazyLoad [src]="wallpaper.high" class="par-wallpaper-image"/>
+    </div>
+  <div class="par-wallpaper-info">
+    <p class="par-wallpaper-info-title">{{wallpaper.title}}</p>
+    <a class="par-wallpaper-info-button" href="{{wallpaper.high}}" download>Download</a>
+  </div>
+</div>

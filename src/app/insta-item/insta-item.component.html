@@ -1,0 +1,8 @@
+<div 
+  class="par-instaItem"
+  routerLink="/instaFeed/{{instaFeedItem.id}}"
+  (click)="setInstaDetail(instaFeedItem)">
+  <div class="par-instaItem-imageWrapper">
+      <img appLazyLoad [src]="instaFeedItem.images.standard_resolution.url" class="par-instaItem-image"/>
+  </div>
+</div>

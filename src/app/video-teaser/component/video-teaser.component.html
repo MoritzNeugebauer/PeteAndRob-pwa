@@ -1,0 +1,17 @@
+<div 
+  routerLink="/videos/{{video.videoId}}" 
+  class="par-videoTeaser"
+  (click)="setVideoDetail(video)"
+>
+  <div class="par-videoTeaser-imageWrapper">
+      <img appLazyLoad [src]="video.image550" class="par-videoTeaser-image"/>
+  </div>
+  <div class="par-videoTeaser-infoWrapper">
+    <div class="par-videoTeaser-infoWrapper-episode">
+      Episode: #{{ video.videoId + 1 }}
+    </div>
+    <div class="par-videoTeaser-infoWrapper-title">
+      {{ video.title }}
+    </div>
+  </div>
+</div>

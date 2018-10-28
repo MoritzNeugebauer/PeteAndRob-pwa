@@ -1,0 +1,10 @@
+.par-error-message {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    transform: translateY(-50%);
+    max-width: 250px;
+    margin: 0 auto;
+}

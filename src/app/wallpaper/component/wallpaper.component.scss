@@ -1,0 +1,54 @@
+.par-wallpaper {
+    background-color: #ffffff;
+
+    .par-wallpaper-imageWrapper {
+        width: 100%;
+        position: relative;
+        padding-bottom: 177.5%;
+        height: 0;
+        background-color:#ffffff;
+
+        .par-wallpaper-image {
+            width: 100%;
+        }
+
+        .img-loaded {
+            width: 100%;
+            opacity: 1;
+            animation-name: fadeInOpacity;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-in-out;
+            animation-duration: 0.4s;
+        }
+    
+        @keyframes fadeInOpacity {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    }
+
+    .par-wallpaper-info {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 15px;
+        padding-bottom: 30px;
+        
+        .par-wallpaper-info-title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .par-wallpaper-info-button {
+            display: block;
+            background-color: #DB6A18;
+            height: 60px;
+            line-height: 60px;
+            color: #ffffff;
+            text-align: center;
+        }
+    }
+}

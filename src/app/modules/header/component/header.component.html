@@ -1,0 +1,20 @@
+<div class="par-header">
+  <div 
+    class="par-header-back"
+    (click)="goBack()"
+    [hidden]="hideBackButton()">
+      <svg class="par-header-back-button" height="20px" aria-hidden="true" data-prefix="fas" data-icon="arrow-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+        <path fill="currentColor" d="M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"></path>
+      </svg>
+  </div>
+  <div class="par-header-logo" [hidden]="hideLogo()">
+    <img src="../../../../assets/icons/icon-60x60.jpg" srcset="../../../../assets/icons/icon-60x60.jpg 1x, ../../../../assets/icons/icon-60x60@2x.jpg 2x, ../../../../assets/icons/icon-60x60@3x.jpg 3x" alt="">
+  </div>
+  <div class="par-header-title">{{title}}</div>
+  <div 
+    class="par-header-info" 
+    routerLink="/infos"
+    [hidden]="hideInfoButton()">
+    <svg height="20px" aria-hidden="true" data-prefix="fas" data-icon="info" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 512"><path fill="currentColor" d="M20 424.229h20V279.771H20c-11.046 0-20-8.954-20-20V212c0-11.046 8.954-20 20-20h112c11.046 0 20 8.954 20 20v212.229h20c11.046 0 20 8.954 20 20V492c0 11.046-8.954 20-20 20H20c-11.046 0-20-8.954-20-20v-47.771c0-11.046 8.954-20 20-20zM96 0C56.235 0 24 32.235 24 72s32.235 72 72 72 72-32.235 72-72S135.764 0 96 0z"></path></svg>
+  </div>
+</div>

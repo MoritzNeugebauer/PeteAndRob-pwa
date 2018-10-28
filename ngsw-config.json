@@ -1,0 +1,47 @@
+{
+  "index": "/index.html",
+  "dataGroups":
+  [
+    {
+      "name": "api",
+      "urls": ["/rss/videos.php", "/rss/wallpaper.php"],
+      "cacheConfig": {
+        "maxSize": 16,
+        "maxAge": "1h",
+        "strategy": "freshness",
+        "timeout": "3s"
+      }
+    },
+    {
+      "name": "insta-api",
+      "urls": ["https://api.instagram.com/v1/users/**"],
+      "cacheConfig": {
+        "maxSize": 10,
+        "maxAge": "1h",
+        "strategy": "freshness",
+        "timeout": "3s"
+      }
+    }
+  ],
+  "assetGroups": [{
+    "name": "app",
+    "installMode": "prefetch",
+    "resources": {
+      "files": [
+        "/favicon.ico",
+        "/index.html",
+        "/*.css",
+        "/*.js"
+      ]
+    }
+  }, {
+    "name": "assets",
+    "installMode": "lazy",
+    "updateMode": "prefetch",
+    "resources": {
+      "files": [
+        "/assets/**"
+      ]
+    }
+  }]
+}

@@ -1,0 +1,9 @@
+<par-loading-spinner *ngIf="isLoading"></par-loading-spinner>
+<par-error-message *ngIf="!isLoading && errorLoading"></par-error-message>
+<div class="par-videoList" *ngIf="!isLoading && !errorLoading">
+  <ul>
+    <li *ngFor="let video of videoList">
+      <par-video-teaser [video]="video"></par-video-teaser>
+    </li>
+  </ul>
+</div>

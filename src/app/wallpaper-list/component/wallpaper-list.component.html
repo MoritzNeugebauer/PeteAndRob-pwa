@@ -1,0 +1,20 @@
+<par-loading-spinner *ngIf="isLoading"></par-loading-spinner>
+<par-error-message *ngIf="!isLoading && errorLoading"></par-error-message>
+<div class="par-wallpaperList" *ngIf="!isLoading && !errorLoading">
+  <ul>
+    <li *ngFor="let wallpaper of wallpaperList; let i=index">
+      <a 
+        routerLink="/wallpapers/{{i}}" 
+        class="par-wallpaperList-wallpaper"
+        (click)="setWallpaperDetail(i)"
+      >
+        <div class="par-wallpaperList-wallpaper-imageWrapper">
+            <img appLazyLoad [src]="wallpaper.normal" class="par-wallpaperList-wallpaper-image"/>
+        </div>
+        <div class="par-wallpaperList-wallpaper-title">
+          {{ wallpaper.title }}
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>

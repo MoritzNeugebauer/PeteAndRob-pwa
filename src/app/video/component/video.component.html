@@ -1,0 +1,31 @@
+<par-loading-spinner *ngIf="isLoading"></par-loading-spinner>
+<par-error-message *ngIf="!isLoading && errorLoading"></par-error-message>
+<div class="par-video-detail" *ngIf="!isLoading && !errorLoading">
+  <div class="par-video-detail-videoWrapper">
+      <video 
+        id='video'
+        controls
+        poster={{video.image550}}
+        class="par-video-detail-videoWrapper-video"
+        preload="none"
+        muted>
+          <source 
+            src={{video.video}} 
+            type="video/mp4" 
+          />
+            {{video.title}}
+      </video>
+  </div>
+  <div class="par-video-detail-info">
+    <div class="par-video-detail-info-headline">{{ video.title }}</div>
+    <p class="par-video-detail-info-description">{{ video.description }}</p>
+  </div>
+  <div class="par-video-detail-relatedVideos" id="detail-relatedVideos">
+    <div class="par-video-detail-relatedVideos-headline">More funky Videos</div>
+    <ul id="detail-relatedVideos-list">
+        <li *ngFor="let video of relatedVideos">
+          <par-video-teaser [video]="video"></par-video-teaser>
+        </li>
+      </ul>
+  </div>
+</div>

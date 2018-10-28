@@ -1,0 +1,26 @@
+.par-info {
+    padding: 20px;
+
+    .par-info-headline {
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .par-info-text {
+        margin-bottom: 40px;
+    }
+
+    .par-info-social-list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        .par-info-social-list-item {
+            display: inline-block;
+            width: 25%;
+            padding-right: 20px;
+        }
+    }
+}

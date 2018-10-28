@@ -1,0 +1,20 @@
+<par-loading-spinner *ngIf="isLoading"></par-loading-spinner>
+<par-error-message *ngIf="!isLoading && errorLoading"></par-error-message>
+<div class="par-insta-detail" *ngIf="!isLoading && !errorLoading">
+  <div class="par-insta-detail-imageWrapper">
+    <img appLazyLoad [src]="instaItem.images.standard_resolution.url" class="par-insta-detail-image"/>
+  </div>
+  <div class="par-insta-detail-info">
+    <div class="par-insta-detail-info-likes">{{ instaItem.likes.count }} Likes</div>
+    <p class="par-insta-detail-info-caption">{{ instaItem.caption.text }}</p>
+  </div>
+  <!--
+  <div class="par-video-detail-relatedVideos" id="detail-relatedVideos">
+    <div class="par-video-detail-relatedVideos-headline">More funky Videos</div>
+    <ul id="detail-relatedVideos-list">
+        <li *ngFor="let video of relatedVideos">
+          <par-video-teaser [video]="video"></par-video-teaser>
+        </li>
+      </ul>
+  </div>-->
+</div>
